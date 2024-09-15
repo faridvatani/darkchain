@@ -6,6 +6,7 @@ import cone from "@/assets/images/cone.png";
 import icosahedron from "@/assets/images/icosahedron.png";
 import ArrowRight from "@/assets/images/arrow-long-right.svg";
 import { twMerge } from "tailwind-merge";
+import { TextButton } from "@/components/TextButton";
 
 const CardData = [
   {
@@ -87,16 +88,7 @@ export const FeaturesCards = () => {
                 </h3>
                 <p className="text-lg text-zinc-400 mt-4">{card.description}</p>
                 <div className="flex justify-between mt-12">
-                  <button
-                    className={twMerge(
-                      "font-heading font-extrabold text-sm uppercase tracking-wider text-fuchsia-500",
-                      card.color === "lime" && "text-lime-500",
-                      card.color === "cyan" && "text-cyan-500",
-                      card.color === "violet" && "text-violet-500",
-                    )}
-                  >
-                    Learn More
-                  </button>
+                  <TextButton color={card.color}>Learn More</TextButton>
                   <ArrowRight className="stroke-2 size-8 text-zinc-500 group-hover:text-zinc-300 transition duration-300 -translate-x-2 group-hover:translate-x-0" />
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { FeaturesCards } from "@/sections/FeaturesCards";
+import { FeaturesGrid } from "@/sections/FeaturesGrid";
 import { Hero } from "@/sections/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <FeaturesCards />
+      <FeaturesGrid />
     </main>
   );
 }
