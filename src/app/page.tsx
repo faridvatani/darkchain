@@ -1,4 +1,5 @@
 import { getLatestPosts } from "@/content/config";
+import { CallToAction } from "@/sections/CallToAction";
 import { FeaturesCards } from "@/sections/FeaturesCards";
 import { FeaturesGrid } from "@/sections/FeaturesGrid";
 import { Hero } from "@/sections/Hero";
@@ -17,6 +18,7 @@ export default async function Home() {
       <FeaturesGrid />
       <LatestPosts latestPosts={latestPosts} />
       <Testimonials />
+      <CallToAction />
     </main>
   );
 }
