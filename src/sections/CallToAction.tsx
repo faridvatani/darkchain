@@ -1,39 +1,63 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { CutCornerButton } from "@/components/CutCornerButton";
 import { Hexagon } from "@/components/Hexagon";
 import { CircularOutline } from "@/components/CircularOutline";
 import cuboid from "@/assets/images/cuboid.png";
 import cylinder from "@/assets/images/cylinder.png";
-
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export const CallToAction = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const rotate = useTransform(scrollYProgress, [0, 1], [45, -45]);
   return (
-    <section className="py-60 overflow-hidden">
+    <section ref={sectionRef} className="py-60 overflow-hidden">
       <div className="container">
         <div className="relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Hexagon className="size-[700px]" />
+            <Hexagon size={700} />
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Hexagon className="size-[1100px]" />
+            <Hexagon size={1100} duration={50} reverse />
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <CircularOutline className="absolute left-0 -top-[400px]">
-              <Image
-                src={cuboid}
-                alt="Cuboid 3D Image"
-                className="size-[140px]"
-              />
+            <CircularOutline className="absolute left-0 -top-[400px]" animate>
+              <motion.div
+                style={{
+                  rotate,
+                }}
+              >
+                <Image
+                  src={cuboid}
+                  alt="Cuboid 3D Image"
+                  className="size-[140px]"
+                />
+              </motion.div>
             </CircularOutline>
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <CircularOutline className="absolute -left-[600px] -top-[70px]">
-              <Image
-                src={cylinder}
-                alt="Cylinder 3D Image"
-                className="size-[140px]"
-              />
+            <CircularOutline
+              className="absolute -left-[600px] -top-[70px]"
+              animate
+            >
+              <motion.div
+                style={{
+                  rotate,
+                }}
+              >
+                <Image
+                  src={cylinder}
+                  alt="Cylinder 3D Image"
+                  className="size-[140px]"
+                />
+              </motion.div>
             </CircularOutline>
           </div>
           <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">
