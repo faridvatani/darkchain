@@ -1,17 +1,25 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Card } from "@/components/Card";
 import { Post } from "@/types/types";
 import { getPostColorFromCategory } from "@/utils/PostUtils";
 import { Tag } from "@/components/Tag";
 import { CutCornerButton } from "@/components/CutCornerButton";
 import { twMerge } from "tailwind-merge";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface LatestPostsProps {
   latestPosts: Post[];
 }
 
 export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "start center"],
+  });
+
+  const marginTop = useTransform(scrollYProgress, [0, 1], [0, 64]);
   return (
     <section className="py-60">
       <div className="container">
@@ -42,7 +50,13 @@ export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
               </Card>
             ))}
           </div>
-          <div className="hidden md:flex flex-col gap-8 mt-16">
+          <motion.div
+            ref={targetRef}
+            style={{
+              marginTop,
+            }}
+            className="hidden md:flex flex-col gap-8 mt-16"
+          >
             {latestPosts.map((post, index) => (
               <Card
                 key={index}
@@ -58,7 +72,7 @@ export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
                 <p className="text-lg text-zinc-400 mt-6">{post.description}</p>
               </Card>
             ))}
-          </div>
+          </motion.div>
         </div>
         <div className="flex justify-center mt-48 md:mt-32">
           <CutCornerButton>Read the Blog</CutCornerButton>
