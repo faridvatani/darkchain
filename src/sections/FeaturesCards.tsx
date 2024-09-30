@@ -1,10 +1,12 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import pill from "@/assets/images/pill.png";
 import cuboid from "@/assets/images/cuboid.png";
 import cone from "@/assets/images/cone.png";
 import icosahedron from "@/assets/images/icosahedron.png";
 import { Card } from "@/components/Card";
+import { twMerge } from "tailwind-merge";
 
 const CardData = [
   {
@@ -31,13 +33,23 @@ const CardData = [
   {
     image: icosahedron,
     title: "Seamless Blockchain Integration",
-    desciprtion:
+    description:
       "Integrate blockchain technology seamlessly into your projects, with minimal effort and maximum efficiency.",
     color: "violet",
   },
 ];
 
 export const FeaturesCards = () => {
+  const [selectedCardIndex, setSelectedCardIndex] = useState<number>(0);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  useEffect(() => {
+    if (isHovered) return;
+    const timeoute = setTimeout(() => {
+      setSelectedCardIndex((prev) => (prev + 1) % CardData.length);
+    }, 3000);
+
+    return () => clearTimeout(timeoute);
+  }, [selectedCardIndex, isHovered]);
   return (
     <section className="py-24 overflow-x-clip md:-mt-28">
       <div className="container">
@@ -47,26 +59,34 @@ export const FeaturesCards = () => {
         <div className="mt-36 lg:mt-48 flex">
           <div className="flex flex-none gap-8">
             {CardData.map((card, index) => (
-              <Card
+              <div
                 key={index}
-                color={card.color}
-                className="max-w-xs md:max-w-md"
+                className="inline-flex transition-all duration-500"
+                style={{
+                  transform: `translateX(calc((-100% - 2rem) * ${selectedCardIndex}))`,
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
-                <div className="flex justify-center -mt-20">
-                  <div className="relative inline-flex">
-                    <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 group-hover:bg-zinc-950/30 transition duration-300 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]"></div>
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      className="size-40 group-hover:-translate-y-6 transition duration-300"
-                    />
+                <Card color={card.color} className="max-w-xs md:max-w-md">
+                  <div className="flex justify-center -mt-20">
+                    <div className="relative inline-flex">
+                      <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 group-hover:bg-zinc-950/30 transition duration-300 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]"></div>
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        className="size-40 group-hover:-translate-y-6 transition duration-300"
+                      />
+                    </div>
                   </div>
-                </div>
-                <h3 className="font-heading font-black text-3xl mt-12">
-                  {card.title}
-                </h3>
-                <p className="text-lg text-zinc-400 mt-4">{card.description}</p>
-              </Card>
+                  <h3 className="font-heading font-black text-3xl mt-12">
+                    {card.title}
+                  </h3>
+                  <p className="text-lg text-zinc-400 mt-4">
+                    {card.description}
+                  </p>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
@@ -75,7 +95,11 @@ export const FeaturesCards = () => {
             {CardData.map((_, i) => (
               <div
                 key={i}
-                className="size-2.5 bg-zinc-500 rounded-full cursor-pointer"
+                className={twMerge(
+                  "size-2.5 bg-zinc-500 rounded-full cursor-pointer",
+                  i === selectedCardIndex && "bg-zinc-300",
+                )}
+                onClick={() => setSelectedCardIndex(i)}
               ></div>
             ))}
           </div>
