@@ -58,7 +58,7 @@ export const Hero = () => {
           <CutCornerButton>Get Started</CutCornerButton>
         </div>
         <div className="flex justify-center mt-24">
-          <div className="inline-flex relative z-0">
+          <div className="inline-flex relative -z-10">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Hexagon className="size-[1100px]" size={1100} />
             </div>
