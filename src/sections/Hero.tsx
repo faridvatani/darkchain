@@ -109,7 +109,10 @@ export const Hero = () => {
               </CircularOutline>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <CircularOutline className="absolute -left-[600px] -top-[80px]">
+              <CircularOutline
+                className="absolute -left-[600px] -top-[80px]"
+                animate
+              >
                 <motion.div
                   ref={torusRef}
                   style={{

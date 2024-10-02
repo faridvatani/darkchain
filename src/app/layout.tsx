@@ -3,6 +3,8 @@ import { fontSans } from "@/config/fonts";
 import "@/styles/globals.css";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
+import { Testimonials } from "@/sections/Testimonials";
+import { CallToAction } from "@/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Darkchain",
@@ -19,6 +21,8 @@ export default function RootLayout({
       <body className={fontSans.variable} suppressHydrationWarning>
         <Header />
         {children}
+        <Testimonials />
+        <CallToAction />
         <Footer />
       </body>
     </html>

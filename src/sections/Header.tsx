@@ -3,10 +3,10 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logo from "@/assets/images/logo.svg?url";
 import { CutCornerButton } from "@/components/CutCornerButton";
-import Link from "next/link";
 import { Hexagon } from "@/components/Hexagon";
 import { twMerge } from "tailwind-merge";
 import { motion, AnimatePresence } from "framer-motion";
+import MotionLink from "@/components/MotionLink";
 
 const navLinks = [
   {
@@ -93,18 +93,18 @@ export const Header = () => {
               <div className="h-full flex items-center justify-center">
                 <nav className="flex flex-col items-center gap-12 md:gap-16">
                   {navLinks.map((link, index) => (
-                    <motion.div
+                    <MotionLink
                       key={index}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.25 * index }}
                     >
-                      <Link href={link.href}>
-                        <span className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-zinc-500 hover:text-zinc-300 transition duration-300">
-                          {link.title}
-                        </span>
-                      </Link>
-                    </motion.div>
+                      <span className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-zinc-500 hover:text-zinc-300 transition duration-300">
+                        {link.title}
+                      </span>
+                    </MotionLink>
                   ))}
                 </nav>
               </div>

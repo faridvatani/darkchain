@@ -10,6 +10,7 @@ export interface Post {
   pubDate: Date;
   updatedDate?: Date;
   category: string;
+  slug: string;
   author: Author;
 }
 

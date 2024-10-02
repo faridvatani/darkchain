@@ -57,7 +57,7 @@ export const Hexagon = (
           height="72"
           viewBox="0 0 82 72"
           fill="none"
-          stroke-width="6"
+          strokeWidth="6"
           xmlns="http://www.w3.org/2000/svg"
           className={twMerge(
             "absolute text-fuchsia-500/30 stroke-current -rotate-6",
