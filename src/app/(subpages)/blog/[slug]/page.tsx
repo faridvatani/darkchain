@@ -2,7 +2,7 @@ import { InteriorContent } from "@/components/InteriorContent";
 import { InteriorHero } from "@/components/InteriorHero";
 import { Tag } from "@/components/Tag";
 import getPosts, { getPost } from "@/lib/blogService";
-import { getPostColorFromCategory } from "@/utils/PostUtils";
+import { getColorFromCategory } from "@/utils/utils";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
@@ -59,7 +59,7 @@ export default async function PostPage({
       <InteriorHero>
         <div className="relative">
           <div className="flex justify-center">
-            <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
+            <Tag color={getColorFromCategory(category)}>{category}</Tag>
           </div>
           <h1 className="font-heading font-black text-5xl md:text-6xl lg:text-7xl text-center mt-4">
             {title}

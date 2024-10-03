@@ -5,7 +5,7 @@ import MotionLink from "@/components/MotionLink";
 import { Tag } from "@/components/Tag";
 import { getPosts } from "@/lib/blogService";
 import { BlogPost } from "@/types/types";
-import { getPostColorFromCategory } from "@/utils/PostUtils";
+import { getColorFromCategory } from "@/utils/utils";
 import { Metadata } from "next";
 import { twMerge } from "tailwind-merge";
 import { InteriorContent } from "@/components/InteriorContent";
@@ -58,10 +58,10 @@ export default async function Blog() {
                 className={twMerge(index % 2 === 0 ? "" : "block md:hidden")}
               >
                 <Card
-                  color={getPostColorFromCategory(post.category)}
+                  color={getColorFromCategory(post.category)}
                   buttonText="Read More"
                 >
-                  <Tag color={getPostColorFromCategory(post.category)}>
+                  <Tag color={getColorFromCategory(post.category)}>
                     {post.category}
                   </Tag>
                   <h2 className="font-heading font-black text-3xl mt-4">
@@ -89,10 +89,10 @@ export default async function Blog() {
                 className={twMerge(index % 2 === 0 ? "hidden" : "")}
               >
                 <Card
-                  color={getPostColorFromCategory(post.category)}
+                  color={getColorFromCategory(post.category)}
                   buttonText="Read More"
                 >
-                  <Tag color={getPostColorFromCategory(post.category)}>
+                  <Tag color={getColorFromCategory(post.category)}>
                     {post.category}
                   </Tag>
                   <h2 className="font-heading font-black text-3xl mt-4">

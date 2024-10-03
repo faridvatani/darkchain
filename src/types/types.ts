@@ -19,3 +19,16 @@ export interface BlogPost {
   metadata: Post;
   body: string;
 }
+
+export interface Position {
+  title: string;
+  description: string;
+  pubDate: Date;
+  remote: boolean;
+  type: string;
+  category: string;
+}
+export interface Positions {
+  metadata: Position;
+  body: string;
+}

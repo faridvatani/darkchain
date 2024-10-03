@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { Card } from "@/components/Card";
 import { Post } from "@/types/types";
-import { getPostColorFromCategory } from "@/utils/PostUtils";
+import { getColorFromCategory } from "@/utils/utils";
 import { Tag } from "@/components/Tag";
 import { CutCornerButton } from "@/components/CutCornerButton";
 import { twMerge } from "tailwind-merge";
@@ -37,10 +37,10 @@ export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
             {latestPosts.map((post, index) => (
               <Card
                 key={index}
-                color={getPostColorFromCategory(post.category)}
+                color={getColorFromCategory(post.category)}
                 className={twMerge((index === 1 || index === 3) && "md:hidden")}
               >
-                <Tag color={getPostColorFromCategory(post.category)}>
+                <Tag color={getColorFromCategory(post.category)}>
                   {post.category}
                 </Tag>
                 <h3 className="font-heading font-black text-3xl mt-3">
@@ -60,10 +60,10 @@ export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
             {latestPosts.map((post, index) => (
               <Card
                 key={index}
-                color={getPostColorFromCategory(post.category)}
+                color={getColorFromCategory(post.category)}
                 className={twMerge((index === 0 || index === 2) && "md:hidden")}
               >
-                <Tag color={getPostColorFromCategory(post.category)}>
+                <Tag color={getColorFromCategory(post.category)}>
                   {post.category}
                 </Tag>
                 <h3 className="font-heading font-black text-3xl mt-3">
