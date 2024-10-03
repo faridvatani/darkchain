@@ -2,12 +2,13 @@
 title: "Blockchain's Role in Decentralized Finance (DeFi)"
 description: "Explore how blockchain technology is revolutionizing traditional finance by enabling decentralized finance (DeFi) platforms."
 pubDate: "2024-08-01"
+lastModified: "2024-08-01"
 category: Technology
 slug: "blockchain-role-decentralized-finance-defi"
 author:
   name: "Alice Monroe"
   title: "Blockchain Analyst - ChainWave"
-  image: "/assets/images/alice.jpg"
+  image: "/assets/images/avatar-erica-wyatt.jpg"
 ---
 
 ## Understanding the Basics of Blockchain

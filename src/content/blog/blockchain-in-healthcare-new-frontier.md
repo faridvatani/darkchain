@@ -2,12 +2,13 @@
 title: "Blockchain in Healthcare: A New Frontier"
 description: "Discover how blockchain can revolutionize the healthcare industry by enhancing data security and streamlining patient records."
 pubDate: "2024-08-12"
+lastModified: "2024-08-12"
 category: Innovation
 slug: "blockchain-in-healthcare-new-frontier"
 author:
   name: "Emily Davis"
   title: "Lead Researcher - BlockLink"
-  image: "/assets/images/becky.jpg"
+  image: "/assets/images/avatar-harry-bender.jpg"
 ---
 
 ## Understanding the Basics of Blockchain in Healthcare

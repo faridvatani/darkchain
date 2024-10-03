@@ -2,12 +2,13 @@
 title: "Smart Contracts: The Future of Legal Agreements"
 description: "An in-depth look at how smart contracts on the blockchain are set to disrupt the legal industry and automate agreements."
 pubDate: "2024-08-03"
+lastModified: "2024-08-03"
 category: Innovation
 slug: "smart-contracts-future-legal-agreements"
 author:
   name: "John Smith"
   title: "Sr. Developer - BlockWorld"
-  image: "/assets/images/john.jpg"
+  image: "/assets/images/avatar-noel-baldwin.jpg"
 ---
 
 ## Introduction to Smart Contracts

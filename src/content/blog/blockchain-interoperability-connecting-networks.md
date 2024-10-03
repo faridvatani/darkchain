@@ -2,12 +2,13 @@
 title: "Blockchain Interoperability: Connecting Different Networks"
 description: "How interoperability solutions are bridging the gap between various blockchain networks, enabling seamless transactions."
 pubDate: "2024-08-18"
+lastModified: "2024-08-18"
 category: Innovation
 slug: "blockchain-interoperability-connecting-networks"
 author:
   name: "Emily Davis"
   title: "Lead Researcher - BlockLink"
-  image: "/assets/images/becky.jpg"
+  image: "/assets/images/avatar-noel-baldwin.jpg"
 ---
 
 ## Understanding Blockchain Interoperability

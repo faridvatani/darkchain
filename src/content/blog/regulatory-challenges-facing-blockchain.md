@@ -2,12 +2,13 @@
 title: "Regulatory Challenges Facing Blockchain"
 description: "Understanding the regulatory landscape surrounding blockchain and what it means for the future of this technology."
 pubDate: "2024-08-20"
+lastModified: "2024-08-20"
 category: Technology
 slug: "regulatory-challenges-facing-blockchain"
 author:
   name: "Alice Monroe"
   title: "Blockchain Analyst - ChainWave"
-  image: "/assets/images/alice.jpg"
+  image: "/assets/images/avatar-erica-wyatt.jpg"
 ---
 
 ## Introduction to Regulatory Challenges

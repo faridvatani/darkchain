@@ -9,6 +9,7 @@ export interface Post {
   description: string;
   pubDate: Date;
   updatedDate?: Date;
+  lastModified?: Date;
   category: string;
   slug: string;
   author: Author;
@@ -16,6 +17,5 @@ export interface Post {
 
 export interface BlogPost {
   metadata: Post;
-  content: string;
-  fileName: string;
+  body: string;
 }

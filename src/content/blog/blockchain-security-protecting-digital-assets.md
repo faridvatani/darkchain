@@ -2,12 +2,13 @@
 title: "Blockchain Security: Protecting Digital Assets"
 description: "Explore the key security features of blockchain technology and how it keeps digital assets safe from cyber threats."
 pubDate: "2024-08-16"
+lastModified: "2024-08-16"
 category: Security
 slug: "blockchain-security-protecting-digital-assets"
 author:
   name: "John Smith"
   title: "Sr. Developer - BlockWorld"
-  image: "/assets/images/john.jpg"
+  image: "/assets/images/avatar-noel-baldwin.jpg"
 ---
 
 ## Understanding the Basics of Blockchain Security

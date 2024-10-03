@@ -2,12 +2,13 @@
 title: "Blockchain Scalability: Challenges and Solutions"
 description: "A comprehensive overview of the scalability issues faced by blockchain networks and potential solutions being developed."
 pubDate: "2024-08-07"
+lastModified: "2024-08-07"
 category: Security
 slug: "blockchain-scalability-challenges-solutions"
 author:
   name: "Alice Monroe"
   title: "Blockchain Analyst - ChainWave"
-  image: "/assets/images/alice.jpg"
+  image: "/assets/images/avatar-harry-bender.jpg"
 ---
 
 ## Understanding Blockchain Scalability

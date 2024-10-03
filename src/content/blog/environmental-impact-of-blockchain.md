@@ -2,12 +2,13 @@
 title: "The Environmental Impact of Blockchain"
 description: "Evaluating the carbon footprint of blockchain technologies and what is being done to make them more sustainable."
 pubDate: "2024-08-15"
+lastModified: "2024-08-15"
 category: Sustainability
 slug: "environmental-impact-of-blockchain"
 author:
   name: "John Smith"
   title: "Sr. Developer - BlockWorld"
-  image: "/assets/images/john.jpg"
+  image: "/assets/images/avatar-erica-wyatt.jpg"
 ---
 
 ## Understanding the Environmental Impact

@@ -2,12 +2,13 @@
 title: "Tokenomics: Understanding Blockchain Economics"
 description: "An introductory guide to tokenomics and how blockchain-based tokens are driving new economic models."
 pubDate: "2024-08-14"
+lastModified: "2024-08-14"
 category: Technology
 slug: "tokenomics-understanding-blockchain-economics"
 author:
   name: "Alice Monroe"
   title: "Blockchain Analyst - ChainWave"
-  image: "/assets/images/alice.jpg"
+  image: "/assets/images/avatar-harry-bender.jpg"
 ---
 
 ## Understanding the Basics of Tokenomics
@@ -16,7 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 ### Key Features of Tokenomics
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin dapibus euismod metus, vel scelerisque ligula. Nulla facilisi. Quisque ac magna eget metus dapibus luctus. Donec vel venenatis risus. Vivamus vitae ligula tincidunt, dictum purus eget, accumsan erat. Integer posuere quam a massa pharetra, a pharetra ex pellentesque. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin dapibus euismod metus, vel scelerisque ligula. Nulla facilisi. Quisque ac magna eget metus dapibus luctus. Donec vel venenatis risus. Vivamus vitae ligula tincidunt, dictum purus eget, accumsan erat. Integer posuere quam a massa pharetra, a pharetra ex pellentesque.
 
 - Integer posuere erat a ante venenatis dapibus.
 - Curabitur convallis dolor vel orci sodales, sit amet tincidunt odio feugiat.
@@ -38,7 +39,7 @@ Etiam sit amet massa eget nisi efficitur varius. Nullam fermentum nunc nec liber
 
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
-Phasellus accumsan magna et sapien venenatis, non facilisis metus aliquet. Nam scelerisque tristique urna, vitae suscipit lorem aliquam vel. Praesent vehicula dui at nunc tristique, nec tempus elit tincidunt. Nulla facilisi. Integer sodales orci vel lectus fringilla, at gravida felis tempor. 
+Phasellus accumsan magna et sapien venenatis, non facilisis metus aliquet. Nam scelerisque tristique urna, vitae suscipit lorem aliquam vel. Praesent vehicula dui at nunc tristique, nec tempus elit tincidunt. Nulla facilisi. Integer sodales orci vel lectus fringilla, at gravida felis tempor.
 
 ### Conclusion
 
