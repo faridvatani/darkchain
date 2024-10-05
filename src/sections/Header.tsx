@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import logo from "@/assets/images/logo.svg?url";
 import { CutCornerButton } from "@/components/CutCornerButton";
 import { Hexagon } from "@/components/Hexagon";
 import { twMerge } from "tailwind-merge";
@@ -43,7 +41,9 @@ export const Header = () => {
         <div className="container">
           <div className="flex justify-between items-center h-24 md:h-28">
             <div>
-              <Image src={logo} alt="Darkchain logo" />
+              <h1 className="font-heading font-extrabold uppercase text-3xl text-white">
+                Darkchain
+              </h1>
             </div>
             <div className="flex items-center gap-4">
               <CutCornerButton className="hidden md:inline-flex">

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/images/logo.svg?url";
 import discord from "@/assets/images/discord.svg?url";
 import twitter from "@/assets/images/x-twitter.svg?url";
 import youtube from "@/assets/images/youtube.svg?url";
@@ -46,7 +45,9 @@ export const Footer = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
-            <Image src={logo} alt="Darkchain logo" />
+            <h1 className="font-heading font-extrabold uppercase text-4xl text-white">
+              Darkchain
+            </h1>
           </div>
           <nav className="hidden md:flex gap-12">
             {navItems.map((item, index) => (

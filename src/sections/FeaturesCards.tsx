@@ -46,7 +46,7 @@ export const FeaturesCards = () => {
     if (isHovered) return;
     const timeoute = setTimeout(() => {
       setSelectedCardIndex((prev) => (prev + 1) % CardData.length);
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timeoute);
   }, [selectedCardIndex, isHovered]);
@@ -54,7 +54,7 @@ export const FeaturesCards = () => {
     <section className="py-24 overflow-x-clip md:-mt-28">
       <div className="container">
         <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">
-          Discover the future of blockchain with Blockforge.
+          Discover the future of blockchain with Darkchain.
         </h2>
         <div className="mt-36 lg:mt-48 flex">
           <div className="flex flex-none gap-8">

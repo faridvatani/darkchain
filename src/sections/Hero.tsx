@@ -45,13 +45,13 @@ export const Hero = () => {
     <section className="py-24 md:py-52 overflow-x-clip">
       <div className="container">
         <p className="font-extrabold text-center text-zinc-500 tracking-wider uppercase">
-          Introducing Blockforge
+          Introducing Darkchain
         </p>
         <h1 className="font-heading font-black text-5xl md:text-5xl lg:text-7xl text-center mt-4 max-w-3xl mx-auto">
           The Future of Blockchain is Here.
         </h1>
         <p className="text-center text-xl md:text-2xl text-zinc-400 mt-6 max-w-xl mx-auto">
-          Blockforge is pioneering smart contract integrity with cutting-edge
+          Darkchain is pioneering smart contract integrity with cutting-edge
           data solutions.
         </p>
         <div className="flex justify-center mt-10">

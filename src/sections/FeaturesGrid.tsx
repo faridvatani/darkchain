@@ -93,7 +93,7 @@ export const FeaturesGrid = () => {
                 Empowering the future of blockchain.
               </h2>
               <p className="text-xl lg:text-2xl text-zinc-400 mt-8">
-                Blockforge provides robust and secure infrastructure to support
+                Darkchain provides robust and secure infrastructure to support
                 the next generation of decentralized applications.
               </p>
               <ul className="flex flex-col gap-8 mt-12">
@@ -169,17 +169,17 @@ export const FeaturesGrid = () => {
             </div>
             <div className="col-span-2">
               <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl">
-                Blockforge leads the way.
+                Darkchain leads the way.
               </h2>
               <div className="flex flex-col gap-6 text-xl lg:text-2xl text-zinc-400 mt-6">
                 <p>
-                  Blockforge is dedicated to supporting the evolution of Web3
+                  Darkchain is dedicated to supporting the evolution of Web3
                   applications by delivering the necessary infrastructure and
                   security for Web3.
                 </p>
                 <p>
-                  Blockforge champions Web for everyone. As a decentralized
-                  blockchain scaling platform, Blockforge enables developers to
+                  Darkchain champions Web for everyone. As a decentralized
+                  blockchain scaling platform, Darkchain enables developers to
                   create scalable, user-friendly dApps with low transaction
                   costs, all while ensuring robust security:
                 </p>

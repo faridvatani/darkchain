@@ -15,7 +15,7 @@ const testimonialsItems = [
     avatarImage: Avatar1,
   },
   {
-    text: "Our productivity has skyrocketed since we started using Blockforge. It's a game-changer for our team.",
+    text: "Our productivity has skyrocketed since we started using Darkchain. It's a game-changer for our team.",
     name: "Noel Baldwin",
     title: "Lead Developer - BitBridge",
     avatarImage: Avatar2,
