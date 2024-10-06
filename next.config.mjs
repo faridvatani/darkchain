@@ -2,8 +2,9 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/darkchain',
+  output: "export",
+  basePath: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
+  assetPrefix: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   reactStrictMode: true,
   swcMinify: true,
   // Configure `pageExtensions` to include markdown and MDX files
