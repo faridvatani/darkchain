@@ -5,7 +5,9 @@ const nextConfig = {
   output: process.env.GITHUB_ACTIONS ? "export" : "standalone",
   basePath: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   assetPrefix: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
+  trailingSlash: true,
   images: {
+    loader: "default",
     path: process.env.GITHUB_ACTIONS
       ? "/darkchain/_next/image"
       : "/_next/image",
