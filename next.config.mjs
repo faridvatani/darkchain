@@ -5,6 +5,9 @@ const nextConfig = {
   output: process.env.GITHUB_ACTIONS ? "export" : "standalone",
   basePath: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   assetPrefix: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
+  images: {
+    path: process.env.GITHUB_ACTIONS ? "/darkchain/_next/image" : "/_next/image",
+  },
   reactStrictMode: true,
   swcMinify: true,
   // Configure `pageExtensions` to include markdown and MDX files
