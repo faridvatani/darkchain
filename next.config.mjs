@@ -6,7 +6,7 @@ const nextConfig = {
   basePath: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   assetPrefix: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   images: {
-    path: process.env.GITHUB_ACTIONS ? "/darkchain/_next/image" : "/_next/image",
+    path: "/_next/image",
   },
   reactStrictMode: true,
   swcMinify: true,
