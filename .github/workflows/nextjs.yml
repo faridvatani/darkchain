@@ -60,8 +60,8 @@ jobs:
         # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
         #
         # You may remove this line if you want to manage the configuration yourself.
-          # static_site_generator: next
-          # generator_config_file: ./next.config.mjs
+        # static_site_generator: next
+        # generator_config_file: ./next.config.mjs
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -77,7 +77,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          GITHUB_ACTIONS: true
+          NEXT_PUBLIC_NODE_ENV: ${{ env.NEXT_PUBLIC_NODE_ENV }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

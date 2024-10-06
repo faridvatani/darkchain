@@ -1,17 +1,20 @@
 import createMDX from "@next/mdx";
 
+const isProduction =
+  process.env.NEXT_PUBLIC_NODE_ENV === "production" ? true : false;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: process.env.GITHUB_ACTIONS ? "export" : "standalone",
-  basePath: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
-  assetPrefix: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
+  output: isProduction ? "export" : "standalone",
+  basePath: isProduction ? "/darkchain" : "",
+  assetPrefix: isProduction ? "/darkchain" : "",
   trailingSlash: true,
+
   images: {
-    loader: "default",
-    path: process.env.GITHUB_ACTIONS
-      ? "/darkchain/_next/image"
-      : "/_next/image",
+    path: isProduction ? "/darkchain/_next/image" : "/_next/image",
+    unoptimized: true,
   },
+
   reactStrictMode: true,
   swcMinify: true,
   // Configure `pageExtensions` to include markdown and MDX files
