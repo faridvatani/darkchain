@@ -2,6 +2,7 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: process.env.GITHUB_ACTIONS ? "export" : "standalone",
   basePath: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   assetPrefix: process.env.GITHUB_ACTIONS ? "/darkchain" : "",
   reactStrictMode: true,
