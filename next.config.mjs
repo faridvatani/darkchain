@@ -2,7 +2,6 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
   reactStrictMode: true,
   swcMinify: true,
   // Configure `pageExtensions` to include markdown and MDX files
