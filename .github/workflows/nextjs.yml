@@ -78,6 +78,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
           NEXT_PUBLIC_NODE_ENV: ${{ env.NEXT_PUBLIC_NODE_ENV }}
+          NEXT_PUBLIC_BASE_URL: ${{ env.NEXT_PUBLIC_BASE_URL }}
+          echo: ${{ env.NEXT_PUBLIC_NODE_ENV }} - ${{ env.NEXT_PUBLIC_BASE_URL }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

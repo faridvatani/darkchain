@@ -1,7 +1,6 @@
 import createMDX from "@next/mdx";
 
-const isProduction =
-  process.env.NEXT_PUBLIC_NODE_ENV === "production" ? true : false;
+const isProduction = process.env.NEXT_PUBLIC_NODE_ENV === "production";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,12 +8,9 @@ const nextConfig = {
   basePath: isProduction ? "/darkchain" : "",
   assetPrefix: isProduction ? "/darkchain" : "",
   trailingSlash: true,
-
   images: {
-    path: isProduction ? "/darkchain/_next/image" : "/_next/image",
     unoptimized: true,
   },
-
   reactStrictMode: true,
   swcMinify: true,
   // Configure `pageExtensions` to include markdown and MDX files
