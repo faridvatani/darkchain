@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 export const CutCornerTextarea = (
   props: ComponentPropsWithoutRef<"textarea">,
 ) => {
-  const { className, id, name } = props;
+  const { className, id, name, placeholder } = props;
   return (
     <div className={twMerge("flex relative group z-0", className)}>
       <div className="absolute inset-0 outline outline-2 -outline-offset-2 outline-zinc-700 [mask-image:linear-gradient(225deg,transparent,transparent_10px,black_10px)] group-focus-within:outline-fuchsia-500 -z-10"></div>
@@ -13,6 +13,7 @@ export const CutCornerTextarea = (
       <textarea
         name={name}
         id={id}
+        placeholder={placeholder}
         className="bg-transparent block w-full outline-none px-4 py-3 min-h-32"
       />
     </div>

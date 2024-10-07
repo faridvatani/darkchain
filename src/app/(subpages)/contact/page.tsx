@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 import { InteriorContent } from "@/components/InteriorContent";
 import { InteriorHero } from "@/components/InteriorHero";
-import { CutCornerButton } from "@/components/CutCornerButton";
-import { CutCornerInput } from "@/components/CutCornerInput";
-import { CutCornerTextarea } from "@/components/CutCornerTextarea";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact us to learn more about our products and services.",
 };
+
+const formEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ID || "";
 
 export default async function Contact() {
   return (
@@ -33,31 +33,7 @@ export default async function Contact() {
           <h2 className="font-heading font-black text-3xl">
             What can we help you with?
           </h2>
-          <form className="flex flex-col mt-8">
-            <label htmlFor="name">Name</label>
-            <CutCornerInput
-              type="text"
-              name="name"
-              id="name"
-              className="mt-1"
-            />
-
-            <label htmlFor="email" className="mt-4">
-              Email
-            </label>
-            <CutCornerInput
-              type="email"
-              name="email"
-              id="email"
-              className="mt-1"
-            />
-
-            <label htmlFor="message" className="mt-4">
-              Message
-            </label>
-            <CutCornerTextarea name="message" id="message" className="mt-1" />
-            <CutCornerButton className="mt-4">Send Message</CutCornerButton>
-          </form>
+          <ContactForm formId={formEndpoint} />
         </div>
       </InteriorContent>
     </main>

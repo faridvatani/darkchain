@@ -80,6 +80,7 @@ jobs:
           GITHUB_PAGES: true
           NEXT_PUBLIC_NODE_ENV: ${{ secrets.NEXT_PUBLIC_NODE_ENV }}
           NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
+          NEXT_PUBLIC_FORMSPREE_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_URL }}
       - name: Ensure out directory exists
         run: mkdir -p out
       - name: Archive artifact

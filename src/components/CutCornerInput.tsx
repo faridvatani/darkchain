@@ -3,7 +3,7 @@ import CutCorner from "@/assets/images/cut-corner.svg";
 import { twMerge } from "tailwind-merge";
 
 export const CutCornerInput = (props: ComponentPropsWithoutRef<"input">) => {
-  const { className, type, id, name } = props;
+  const { className, type, id, name, placeholder, required } = props;
   return (
     <div className={twMerge("relative group z-0", className)}>
       <div className="absolute inset-0 outline outline-2 -outline-offset-2 outline-zinc-700 [mask-image:linear-gradient(225deg,transparent,transparent_10px,black_10px)] group-focus-within:outline-fuchsia-500 -z-10"></div>
@@ -12,6 +12,8 @@ export const CutCornerInput = (props: ComponentPropsWithoutRef<"input">) => {
         type={type}
         name={name}
         id={id}
+        placeholder={placeholder}
+        required={required}
         className="bg-transparent h-12 block w-full outline-none px-4"
       />
     </div>
