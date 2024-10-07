@@ -5,6 +5,7 @@ import { Hexagon } from "@/components/Hexagon";
 import { twMerge } from "tailwind-merge";
 import { motion, AnimatePresence } from "framer-motion";
 import MotionLink from "@/components/MotionLink";
+import Link from "next/link";
 
 const navLinks = [
   {
@@ -41,14 +42,18 @@ export const Header = () => {
         <div className="container">
           <div className="flex justify-between items-center h-24 md:h-28">
             <div>
-              <h1 className="font-heading font-extrabold uppercase text-3xl text-white">
-                Darkchain
-              </h1>
+              <Link href="/">
+                <h1 className="font-heading font-extrabold uppercase text-3xl text-white">
+                  Darkchain
+                </h1>
+              </Link>
             </div>
             <div className="flex items-center gap-4">
-              <CutCornerButton className="hidden md:inline-flex">
-                Get Started
-              </CutCornerButton>
+              <Link href="/contact">
+                <CutCornerButton className="hidden md:inline-flex">
+                  Get Started
+                </CutCornerButton>
+              </Link>
               <div
                 className="relative size-10 cursor-pointer"
                 onClick={() => setIsOpen((prev) => !prev)}
@@ -83,7 +88,7 @@ export const Header = () => {
             transition={{ duration: 0.5 }}
             className="fixed size-full top-0 left-0 z-30 bg-zinc-900"
           >
-            <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24 md:mt-28 z-0">
+            <div className="absolute inset-0 bg-zinc-800 mt-24 md:mt-28 z-0">
               <div className="absolute top-1/2 left-full -translate-y-1/2 -translate-x-1/2 -z-10">
                 <Hexagon size={700} />
               </div>

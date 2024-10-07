@@ -7,6 +7,7 @@ import { Tag } from "@/components/Tag";
 import { CutCornerButton } from "@/components/CutCornerButton";
 import { twMerge } from "tailwind-merge";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 interface LatestPostsProps {
   latestPosts: Post[];
@@ -35,19 +36,24 @@ export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 md:mt-28">
           <div className="flex flex-col gap-8">
             {latestPosts.map((post, index) => (
-              <Card
-                key={index}
-                color={getColorFromCategory(post.category)}
-                className={twMerge((index === 1 || index === 3) && "md:hidden")}
-              >
-                <Tag color={getColorFromCategory(post.category)}>
-                  {post.category}
-                </Tag>
-                <h3 className="font-heading font-black text-3xl mt-3">
-                  {post.title}
-                </h3>
-                <p className="text-lg text-zinc-400 mt-6">{post.description}</p>
-              </Card>
+              <Link href={`/blog/${post.slug}`} key={index}>
+                <Card
+                  color={getColorFromCategory(post.category)}
+                  className={twMerge(
+                    (index === 1 || index === 3) && "md:hidden",
+                  )}
+                >
+                  <Tag color={getColorFromCategory(post.category)}>
+                    {post.category}
+                  </Tag>
+                  <h3 className="font-heading font-black text-3xl mt-3">
+                    {post.title}
+                  </h3>
+                  <p className="text-lg text-zinc-400 mt-6">
+                    {post.description}
+                  </p>
+                </Card>
+              </Link>
             ))}
           </div>
           <motion.div
@@ -58,24 +64,31 @@ export const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
             className="hidden md:flex flex-col gap-8 mt-16"
           >
             {latestPosts.map((post, index) => (
-              <Card
-                key={index}
-                color={getColorFromCategory(post.category)}
-                className={twMerge((index === 0 || index === 2) && "md:hidden")}
-              >
-                <Tag color={getColorFromCategory(post.category)}>
-                  {post.category}
-                </Tag>
-                <h3 className="font-heading font-black text-3xl mt-3">
-                  {post.title}
-                </h3>
-                <p className="text-lg text-zinc-400 mt-6">{post.description}</p>
-              </Card>
+              <Link href={`/blog/${post.slug}`} key={index}>
+                <Card
+                  color={getColorFromCategory(post.category)}
+                  className={twMerge(
+                    (index === 0 || index === 2) && "md:hidden",
+                  )}
+                >
+                  <Tag color={getColorFromCategory(post.category)}>
+                    {post.category}
+                  </Tag>
+                  <h3 className="font-heading font-black text-3xl mt-3">
+                    {post.title}
+                  </h3>
+                  <p className="text-lg text-zinc-400 mt-6">
+                    {post.description}
+                  </p>
+                </Card>
+              </Link>
             ))}
           </motion.div>
         </div>
         <div className="flex justify-center mt-48 md:mt-32">
-          <CutCornerButton>Read the Blog</CutCornerButton>
+          <Link href="/blog">
+            <CutCornerButton>Read the Blog</CutCornerButton>
+          </Link>
         </div>
       </div>
     </section>
